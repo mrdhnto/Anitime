@@ -1,4 +1,4 @@
-<img align="center" src='https://raw.githubusercontent.com/AniList/ApiV2-GraphQL-Docs/master/al-graphql.jpg'>
+<img align="center" src='https://raw.githubusercontent.com/Darkerside/Anitime/master/dist/assets/images/anitime-bn.png'>
 
 ## AniTime - So Simple yet So Good
 
