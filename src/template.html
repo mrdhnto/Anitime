@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/dist/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/assets/css/mdb.min.css">
+    <link rel="stylesheet" href="/dist/assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/dist/assets/css/styles.css">
+    <script src="/dist/assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/dist/assets/js/popper.min.js"></script>
+    <script src="/dist/assets/js/bootstrap.min.js"></script>
+    <script src="/dist/assets/js/mdb.min.js"></script>
+    <script src="/dist/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/dist/assets/js/moment.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Anitime - So Simple yet So Good">
+    <meta name="author" content="RA121514">
+    <meta name="author" content="Luminix Studio">
+    <link rel="icon" type="image/png" href="/dist/assets/images/icon.png" >
+    <title>Anitime - So Simple yet So Good</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
+      <div class="navbar-brand col-sm-3 col-md-4 mr-0">ANITIME<span class="site-desc"> - So Simple yet So Good</span></div>
+      <button class="btn btn-sm btn-dark ml-auto" type="button" id="sidebarCollapse">
+        <span class="material-icons align-middle">menu</span>
+      </button>
+    </nav>
+    <div class="wrapper">
+      <side-bar></side-bar>
+      <div class="overlay"></div>
+        <main class="container-fluid">
+            <div class="col-md-12 col-lg-12 px-2">
+              <anime-list class="row mt-3 mb-3" id="airedAnime"></anime-list>
+              <anime-info class="row row-cols-1 mt-3 mb-2"></anime-info>
+              <next-day class="row row-cols-1 text-center mt-2 mb-3"></next-day>
+              <div class="text-center loading"><span class="material-icons" id="loading">sync</span></div>
+            </div>
+        </main>
+  </body>
+</html>
