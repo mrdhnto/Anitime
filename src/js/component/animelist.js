@@ -103,8 +103,6 @@ class AnimeList extends HTMLElement {
               object-position: center;
             }
 
-          
-
 
           </style>
           `;

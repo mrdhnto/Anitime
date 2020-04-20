@@ -11,13 +11,12 @@ class AnimeItem extends HTMLElement {
   render() {
     
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let airing;
 
     if (this._anime.format === "MOVIE") {
       let hours, rhours, minutes, rminutes;
 
       if (this._anime.bannerImage === null){
-        this._anime.bannerImage = "http://spcoded.herobo.com/anitime/assets/images/anitime-bn.jpg";
+        this._anime.bannerImage = "/dist/assets/images/anitime-bn.png";
       }
 
       if (this._anime.duration > 60){
@@ -87,14 +86,15 @@ class AnimeItem extends HTMLElement {
     } else {
 
       if (this._anime.media.bannerImage === null){
-        this._anime.media.bannerImage = "http://spcoded.herobo.com/anitime/assets/images/anitime-bn.jpg";
+        this._anime.media.bannerImage = "/dist/assets/images/anitime-bn.png";
       }
 
       if (this._anime.media.description === null){
-        this._anime.description = "Updating...";
+        this._anime.media.description = "Updating...";
       }
       
       this._anime.media.genres = this._anime.media.genres.join(', ');
+
       this._anime.airingAt = moment.unix(this._anime.airingAt).format('DD MMM, HH:mm');
 
       if (this._anime.media.episodes === null){

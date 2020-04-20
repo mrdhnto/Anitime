@@ -23,6 +23,7 @@ $(document).ready(function() {
         scrolltoTOP();
     });
 
+    //Function to See Tomorow Schedule on TV Section
     $("next-day").on("click", ".schedule-next", function(){
         $('anime-item').hide();
         $('next-day').hide();

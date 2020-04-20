@@ -13,7 +13,7 @@ class SideBar extends HTMLElement {
 		#sidebar {
 		    width: 180px;
 		    position: fixed;
-		    top: 40px;
+		    top: 48px;
 		    left: -185px;
 		    height: 100vh;
 		    z-index: 999;
@@ -107,7 +107,7 @@ class SideBar extends HTMLElement {
 		    cursor: default;
 		}
 
-		#sidebar .nav-item:hover {
+		#sidebar .nav-item:hover, #sidebar .nav-item2:hover {
 		    color: #131417;
 		    background-color: #00ffdc;
 		    cursor: pointer;
@@ -143,19 +143,19 @@ class SideBar extends HTMLElement {
                 </li>
             </ul>
             <ul class="list-unstyled">
-              <li class="nav-item"><a target="_blank" href="http://spcoded.herobo.com">
+              <li class="nav-item2"><a target="_blank" href="https://darkerside.github.io">
                 <div class="nav-link">
                   <span class="material-icons align-middle">info</span>
                   <span class="ml-1">&nbspAbout</span>
                 </div></a>
               </li>
-              <li class="nav-item"><a target="_blank" href="http://spcoded.herobo.com/Anitime">
+              <li class="nav-item2"><a target="_blank" href="https://trakteer.id/ra121514">
                 <div class="nav-link">
-                  <span class="material-icons align-middle">language</span>
-                  <span class="ml-1">&nbspLive</span>
+                  <span class="material-icons align-middle">credit_card</span>
+                  <span class="ml-1">&nbspSupport Me</span>
                 </div></a>
               </li>
-              <li class="nav-item"><a target="_blank" href="https://github.com/Darkerside/Anitime">
+              <li class="nav-item2"><a target="_blank" href="https://github.com/Darkerside/Anitime">
                 <div class="nav-link">
                   <span class="material-icons align-middle">language</span>
                   <span class="ml-1">&nbspGithub</span>

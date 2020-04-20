@@ -90,6 +90,12 @@ class AnimeInfo extends HTMLElement {
               font-size: 13px;
              color: #6c757d;
             }
+
+            @media only screen and (min-width: 0px) and (max-width: 425px) {
+              .anime-info-right {
+                margin: 1em 1em 1em 1.5em;
+              }
+            }
           </style>
           `;
 

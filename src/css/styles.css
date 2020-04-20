@@ -287,4 +287,8 @@ span.schedule-next:hover {
   .anime-info-right {
     margin: 1em 1em 1em 0.4em !important;
   }
+
+  .anime-info-left {
+    padding: 7em 1em 0 1em !important;
+  }
 }
