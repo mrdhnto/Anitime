@@ -2,7 +2,7 @@
 
 ## AniTime - So Simple yet So Good
 
-[AniTime](http://spcoded.herobo.com/anitime) is a Simple Daily Anime, OVA, ONA &amp; Movie Airing Schedule web that use [Anilist Graphql API](https://github.com/AniList/ApiV2-GraphQL-Docs) to show it's content.
+[AniTime](https://darkerside.github.io/project/anitime) is a Simple Daily Anime, OVA, ONA &amp; Movie Airing Schedule web that use [Anilist Graphql API](https://github.com/AniList/ApiV2-GraphQL-Docs) to show it's content.
 It's a full rework of my previous project [Animini](https://github.com/Darkerside/Animini) using [Material Design over Bootstrap](https://mdbootstrap.com) to fit this [Dicoding Challenge](https://www.dicoding.com/challenges/587).
 
 
