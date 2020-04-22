@@ -132,10 +132,12 @@ class AnimeInfo extends HTMLElement {
               }
             } else if (this._animeformat === "OVA") {
               if (airingSchedules.media.format === "OVA" || airingSchedules.media.format === "ONA") {
-                const infoItemElement = document.createElement("info-item");
-                infoItemElement.anime = airingSchedules;
-                this.appendChild(infoItemElement);
-                ova = ova + 1;
+                if (airingSchedules.media.genres.includes("Hentai") === false){
+                  const infoItemElement = document.createElement("info-item");
+                  infoItemElement.anime = airingSchedules;
+                  this.appendChild(infoItemElement);
+                  ova = ova + 1;
+                }
               }
               setTimeout(function(){
                 if (ova === 0){

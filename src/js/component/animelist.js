@@ -142,10 +142,12 @@ class AnimeList extends HTMLElement {
               }
             } else if (this._animeformat === "OVA") {
               if (airingSchedules.media.format === "OVA" || airingSchedules.media.format === "ONA") {
-                const animeItemElement = document.createElement("anime-item");
-                animeItemElement.className = "col pb-0 anime-table animated fadeIn";
-                animeItemElement.anime = airingSchedules;
-                this.appendChild(animeItemElement);
+                if (airingSchedules.media.genres.includes("Hentai") === false){
+                  const animeItemElement = document.createElement("anime-item");
+                  animeItemElement.className = "col pb-0 anime-table animated fadeIn";
+                  animeItemElement.anime = airingSchedules;
+                  this.appendChild(animeItemElement);
+                }
               }
 
             }
