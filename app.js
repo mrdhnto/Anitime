@@ -38,6 +38,8 @@ $(document).ready(function() {
         $('next-day').hide();
         $('anime-item').hide();
         $('.no-item').hide();
+        $('anime-info').children().addClass("d-none");
+        $('anime-list').removeClass("d-none");
         $(this).addClass("active");
         $('.loading').show();
         main('' + $(this).attr('target'));
