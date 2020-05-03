@@ -1,6 +1,6 @@
 {
   "name": "ANITIME",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "ANITIME - Anime Schedule like Simple, ",
   "main": "app.js",
   "scripts": {
@@ -27,9 +27,5 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "anilist-node": "^1.3.1",
-    "jquery": "^3.4.1",
-    "moment": "^2.24.0",
-    "popper.js": "^1.16.1"
   }
 }

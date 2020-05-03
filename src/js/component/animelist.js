@@ -103,7 +103,9 @@ class AnimeList extends HTMLElement {
               object-position: center;
             }
 
-
+            .next-aired {
+              box-shadow: 0 2px 5px 0 rgba(0,255,220,0.35), 0 2px 10px 0 rgba(0,255,220,0.25) !important;
+            }
           </style>
           `;
 

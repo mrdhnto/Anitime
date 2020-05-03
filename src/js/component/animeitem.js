@@ -11,6 +11,7 @@ class AnimeItem extends HTMLElement {
   render() {
     
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let airingTime;
 
     if (this._anime.format === "MOVIE") {
       let hours, rhours, minutes, rminutes;
@@ -29,8 +30,16 @@ class AnimeItem extends HTMLElement {
         this._anime.duration = "?";
       }
 
+      airingTime = this._anime.startDate.day + this._anime.startDate.month + this._anime.startDate.year;
+
       if (this._anime.startDate.day === null){
         this._anime.startDate.day = "";
+      }
+
+      if (this._anime.startDate.month === null){
+        this._anime.startDate.month = "";
+      } else {
+        this._anime.startDate.month = months[this._anime.startDate.month - 1];
       }
 
       if (this._anime.episodes === null){
@@ -41,18 +50,12 @@ class AnimeItem extends HTMLElement {
         this._anime.description = "Updating...";
       }
 
-      if (this._anime.startDate.month === null){
-        this._anime.startDate.month = "";
-      } else {
-        this._anime.startDate.month = months[this._anime.startDate.month - 1];
-      }
-
       this._anime.genres = this._anime.genres.join(', ');
       
 
       this.innerHTML = `
  
-        <div class="card mb-0 rounded-0">
+        <div class="card mb-0 rounded-0 ${airingTime}">
           <div class="row no-gutters">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 anime-cover">
               <img src="${this._anime.coverImage.large}" class="card-img" alt="${this._anime.title.romaji}">
@@ -95,7 +98,7 @@ class AnimeItem extends HTMLElement {
       
       this._anime.media.genres = this._anime.media.genres.join(', ');
 
-      this._anime.airingAt = moment.unix(this._anime.airingAt).format('DD MMM, HH:mm');
+      airingTime = moment.unix(this._anime.airingAt).format('DD MMM, HH:mm');
 
       if (this._anime.media.episodes === null){
         this._anime.media.episodes = "?";
@@ -103,12 +106,12 @@ class AnimeItem extends HTMLElement {
 
       this.innerHTML = `
  
-        <div class="card mb-0 rounded-0">
+        <div class="card mb-0 rounded-0 ${this._anime.airingAt}">
           <div class="row no-gutters">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 anime-cover">
               <img src="${this._anime.media.coverImage.large}" class="card-img" alt="${this._anime.media.title.romaji}">
               <div class="card-img-overlay align-content-between row d-flex">
-                <h5 class="air-time">${this._anime.airingAt}</h5>
+                <h5 class="air-time">${airingTime}</h5>
                 <h5 class="air-eps">Episode ${this._anime.episode}</h5>
               </div>
             </div>

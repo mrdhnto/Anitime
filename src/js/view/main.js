@@ -2,6 +2,7 @@ import '../component/animelist.js';
 import '../component/infolist.js';
 import '../component/nextday.js';
 import DataSource from '../data/data-source.js';
+import highlight from './highlight.js';
 
 let animeformat;
 
@@ -38,6 +39,12 @@ function main(keyword){
 };
  
 function renderResult(results) {
+
+    let section = {
+      data: results,
+      tipe: animeformat
+    };
+
     const animeListElement = document.querySelector("anime-list");
       animeListElement.dataresult = results;
       animeListElement.animeformat = animeformat;
@@ -48,7 +55,8 @@ function renderResult(results) {
 
     const nextDayElement = document.querySelector("next-day");
       nextDayElement.animeformat = animeformat;
-
+      
+    highlight(section);
 };
  
 function fallbackResult(message) {
