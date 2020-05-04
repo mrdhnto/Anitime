@@ -103,6 +103,30 @@ span.schedule-next:hover {
 /*
  * Responsive
  */
+@media only screen and (min-width: 1400px) {
+  #airedAnime {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: space-around;
+  }
+
+  main {
+    max-width: 1380px;
+  }
+
+  .anime-info-left {
+    margin: -4.2em 0em !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  #airedAnime {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33.333%);
+    justify-content: space-around;
+  }
+}
+
 @media only screen and (min-width: 1366px) {
   .anime-row, .anime-cover, .anime-info {
     max-height: 285px !important;
@@ -111,17 +135,6 @@ span.schedule-next:hover {
   .anime-cover {
     max-height: 285px;
     max-width: 202px;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  #airedAnime {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
-    justify-content: space-around;
-  }
-  main {
-    max-width: 1380px;
   }
 }
 
@@ -141,19 +154,33 @@ span.schedule-next:hover {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1399px) {
-  #airedAnime {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 33.333%);
-    justify-content: space-around;
-  }
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #airedAnime {
     display: grid;
     grid-template-columns: repeat(auto-fill, 50%);
     justify-content: space-around;
+  }
+
+  .info-group {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  #airedAnime {
+    display: grid;
+    justify-content: center;
+  }
+
+  .btn-back-anime {
+    padding: .5rem 1.6rem;
+    font-size: .64rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+  .col-md-8 {
+    flex: 0 0 100%;
   }
 }
 
@@ -169,27 +196,6 @@ span.schedule-next:hover {
      display: -webkit-box;
      -webkit-line-clamp: 9;
      -webkit-box-orient: vertical;
-  }
-}
-
-@media only screen and (min-width: 0px) and (max-width: 768px) {
-  #airedAnime {
-    display: grid;
-    justify-content: center;
-  }
-
-  .anime-cv {
-    max-width: 120px;
-    width: 31vw;
-  }
-
-  .anime-info-left {
-    max-width: 120px;
-  }
-
-  .btn-back-anime {
-    padding: .5rem 1.6rem;
-    font-size: .64rem;
   }
 }
 
@@ -217,42 +223,25 @@ span.schedule-next:hover {
      -webkit-box-orient: vertical;
   }
 
-  .anime-cv {
-    margin: 5em 2em 5em 1em;
-  }
-
-  .anime-info-left {
-    padding: 6em 1em 0 1em;
-  }
-
   .anime-info-right {
-    margin: 1em 1em 1em 2em;
-  }
-
-  .jumbotron-title {
-    font-size: 1em;
-  }
-
-  .jumbotron-text {
-   font-size: .745em;
-  }
-
-  .info-title {
-    font-size: .745em;
+    margin: .8em 1em 1em -0.5em;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 425px){
-  .anime-info-right{
-    margin: 1em 1em 1em 1.5em;
-  }
-
   #jumbotron-title {
     font-size: 1.2em;
   }
 
+  .anime-info-left {
+    padding: 0px;
+  }
+
+  .info-group {
+    padding: 0 15px;
+  }
+
   .anime-cv {
-    margin: 0 0 0 1em !important;
     max-height: 100% !important;
   }
 
@@ -260,8 +249,8 @@ span.schedule-next:hover {
     max-height: 100% !important;
   }
 
-  .anime-info-left {
-    padding: 7em 1em 0 1em !important;
+  .anime-info-right {
+    margin: .8em 1em 1em 0.5em;
   }
 }
 
@@ -284,7 +273,7 @@ span.schedule-next:hover {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 320px) {
-  .anime-info-right{
-    margin: 1em 1em 1em 0.5em !important;
+  .anime-info-left {
+    max-width: 100px;
   }
 }

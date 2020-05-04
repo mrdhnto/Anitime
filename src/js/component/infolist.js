@@ -40,10 +40,13 @@ class AnimeInfo extends HTMLElement {
               max-height: 19vw;
             }
 
+            .cv-container {
+              min-height: 7vw;
+            }
+
             .anime-cv {
               padding: 1px;
-              position: absolute;
-              margin: 5em 2em;
+              margin-left: -4em;
             }
 
             .anime-cv img {
@@ -55,8 +58,17 @@ class AnimeInfo extends HTMLElement {
             }
 
             .anime-info-left {
-              padding: 6em 1em 0 3em;
-              margin: 0;
+              position: absolute;
+              margin: calc(100% - 102vw) 0em;
+            }
+
+            .anime-info-left-fill {
+              visibility: hidden;
+              margin: 0 0 1em 0;
+            }
+
+            .info-group {
+              padding: 0.5em 6em 0 2em;
             }
 
             .info-title {
@@ -74,15 +86,15 @@ class AnimeInfo extends HTMLElement {
 
             .anime-info-right {
               padding: 0 0 0 0.2em;
-              margin: 1em 3em 1em 3em;
+              margin: 1em 2.5em 1em -5em;
             }
 
             #ai-r-title {
-              min-height: 5.3vw;
+              min-height: 40px;
             }
 
             #ai-r-text {
-              min-height: 12vw;
+              min-height: 7.5em;
               font-size: 13px;
             }
 
@@ -91,10 +103,91 @@ class AnimeInfo extends HTMLElement {
              color: #6c757d;
             }
 
-            @media only screen and (min-width: 0px) and (max-width: 425px) {
-              .anime-info-right {
-                margin: 1em 1em 1em 1.5em;
+            .ai-r-genre {
+              margin-top: 2em;
+            }
+
+            .btn-back-anime {
+              margin: 0 3em 3em 0;
+            }
+
+            @media only screen and (min-width: 1130px) {
+              .cv-container {
+                min-height: 80px;
               }
+            }
+
+            @media only screen and (min-width: 769px) and (max-width: 1024px) {
+              .info-group {
+                padding: 0 4rem 0 0.5rem;
+              }
+
+              .anime-info-right {
+                margin-left: -4em;
+              }
+            }
+
+            @media only screen and (min-width: 0px) and (max-width: 768px) {
+              .anime-info-left{
+                margin: 0 0 1em 0;
+                max-width: 120px;
+                position: relative;
+              }
+
+              .anime-cv {
+                max-width: 120px;
+                width: 31vw;
+                box-shadow: 0 0 0 0;
+                margin: 0;
+              }
+
+              .anime-cv img {
+                max-height: 135px;
+              }
+
+              .info-group {
+                padding: 0 0 0 0.5em;
+              }
+
+              .anime-info-left-fill {
+                max-width: 120px;
+                display: none;
+              }
+
+              .anime-info-right {
+                margin: 1em 1.5em 1em 0em;
+              }
+
+              .btn-back-anime {
+                margin: 0 2em 2em 0;
+              }
+            }
+
+            @media only screen and (min-width: 0px) and (max-width: 425px){
+              #jumbotron-title {
+                font-size: 1.2em;
+              }
+
+              .anime-info-left {
+                padding: 0px;
+              }
+
+              .info-group {
+                padding: 0 15px;
+              }
+
+              .anime-cv {
+                max-height: 100% !important;
+              }
+
+              .anime-cv img {
+                max-height: 100% !important;
+              }
+
+              .anime-info-right {
+                margin: .8em 1em 1em 0.5em;
+              }
+
             }
           </style>
           `;

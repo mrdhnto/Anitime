@@ -23,15 +23,17 @@ class InfoItem extends HTMLElement {
  
         <div class="jumbotron card rounded-0 p-0 m-0 animated fadeInUp d-none" id="${this._anime.id}">
           <div class="card card-image z-depth-0 mb-0 anime-bn" style="background-image: url(${this._anime.bannerImage});">
-            <div class="card col-md-2 anime-cv">
-                <img src="${this._anime.coverImage.large}" class="card-img">
-            </div>
             <img src="${this._anime.bannerImage}" class="img-fluid anime-bn-fill" />
           </div>
           <div class="card-body text-left p-0">
             <div class="col d-flex p-0">
-              <div class="col-md-2 anime-info-left">
-                <div class="p-0">
+              <div class="col-md-3 anime-info-left">
+                <div class="cv-container row p-0 justify-content-center">
+                  <div class="card mb-0 anime-cv col-md-8">
+                    <img src="${this._anime.coverImage.large}" class="card-img">
+                  </div>
+                </div>
+                <div class="info-group">
                   <div class="info-title">Jenis
                     <div class="info-text p-0">${this._anime.format}</div>
                   </div>
@@ -40,6 +42,24 @@ class InfoItem extends HTMLElement {
                   </div>
                   <div class="info-title">Durasi
                     <div class="info-text p-0">${this._anime.duration} Menit</div>
+                  </div>
+                  <div class="info-title">Studio
+                    <div class="info-text p-0">${studios}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 anime-info-left-fill">
+                <div class="cv-container row p-0 justify-content-center">
+                  <div class="card mb-0 anime-cv col-md-8">
+                    <img src="${this._anime.coverImage.large}" class="card-img">
+                  </div>
+                </div>
+                <div class="info-group">
+                  <div class="info-title">Jenis
+                    <div class="info-text p-0">${this._anime.format}</div>
+                  </div>
+                  <div class="info-title">Jumlah Episode
+                    <div class="info-text p-0">${this._anime.episodes}</div>
                   </div>
                   <div class="info-title">Studio
                     <div class="info-text p-0">${studios}</div>
@@ -59,7 +79,7 @@ class InfoItem extends HTMLElement {
               </div>
             </div>
             <!-- Button -->
-            <div class="row justify-content-end mb-3 mr-3">
+            <div class="row justify-content-end">
               <button class="btn btn-dark btn-rounded btn-back-anime" target="${this._anime.id}">Back</button>
             </div>
           </div>
@@ -78,15 +98,17 @@ class InfoItem extends HTMLElement {
    
         <div class="jumbotron card rounded-0 p-0 m-0 animated fadeInUp d-none" id="${this._anime.mediaId}">
           <div class="card card-image z-depth-0 mb-0 anime-bn" style="background-image: url(${this._anime.media.bannerImage});">
-            <div class="card col-md-2 anime-cv">
-                <img src="${this._anime.media.coverImage.large}" class="card-img">
-            </div>
             <img src="${this._anime.media.bannerImage}" class="img-fluid anime-bn-fill" />
           </div>
           <div class="card-body text-left p-0">
             <div class="col d-flex p-0">
-              <div class="col-md-2 anime-info-left">
-                <div class="p-0">
+              <div class="col-md-3 anime-info-left">
+                <div class="cv-container row p-0 justify-content-center">
+                  <div class="card mb-0 anime-cv col-md-8">
+                    <img src="${this._anime.media.coverImage.large}" class="card-img">
+                  </div>
+                </div>
+                <div class="info-group">
                   <div class="info-title">Jenis
                     <div class="info-text p-0">${this._anime.media.format}</div>
                   </div>
@@ -95,6 +117,24 @@ class InfoItem extends HTMLElement {
                   </div>
                   <div class="info-title">Durasi
                     <div class="info-text p-0">${this._anime.media.duration} Menit</div>
+                  </div>
+                  <div class="info-title">Studio
+                    <div class="info-text p-0">${studios}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 anime-info-left-fill">
+                <div class="cv-container row p-0 justify-content-center">
+                  <div class="card mb-0 anime-cv col-md-8">
+                    <img src="${this._anime.media.coverImage.large}" class="card-img">
+                  </div>
+                </div>
+                <div class="info-group">
+                  <div class="info-title">Jenis
+                    <div class="info-text p-0">${this._anime.media.format}</div>
+                  </div>
+                  <div class="info-title">Jumlah Episode
+                    <div class="info-text p-0">${this._anime.media.episodes}</div>
                   </div>
                   <div class="info-title">Studio
                     <div class="info-text p-0">${studios}</div>
@@ -114,7 +154,7 @@ class InfoItem extends HTMLElement {
               </div>
             </div>
             <!-- Button -->
-            <div class="row justify-content-end mb-3 mr-3">
+            <div class="row justify-content-end">
               <button class="btn btn-dark btn-rounded btn-back-anime" target="${this._anime.mediaId}">Back</button>
             </div>
           </div>
