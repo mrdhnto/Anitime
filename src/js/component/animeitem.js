@@ -104,6 +104,10 @@ class AnimeItem extends HTMLElement {
         this._anime.media.episodes = "?";
       }
 
+      if (this._anime.duration === null){
+        this._anime.duration = "?";
+      }
+
       this.innerHTML = `
  
         <div class="card mb-0 rounded-0 ${this._anime.airingAt}">
