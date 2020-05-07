@@ -104,8 +104,8 @@ class AnimeItem extends HTMLElement {
         this._anime.media.episodes = "?";
       }
 
-      if (this._anime.duration === null){
-        this._anime.duration = "?";
+      if (this._anime.media.duration === null){
+        this._anime.media.duration = "?";
       }
 
       this.innerHTML = `
