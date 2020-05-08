@@ -39,7 +39,7 @@ class SideBar extends HTMLElement {
 	                </li>
 	            </ul>
 	            <ul class="list-unstyled">
-	              <li class="nav-item2"><a href="?mode=movie">
+	              <li class="nav-item2"><a href="?mode=movies">
 	                <div class="nav-link">
 	                  <span class="material-icons align-middle">apps</span>
 	                  <span class="ml-1">&nbspMovies Mode</span>
@@ -130,7 +130,7 @@ class SideBar extends HTMLElement {
 	        </nav>
 	    `
 
-	    if(site_mode === "movie"){
+	    if(site_mode === "movies"){
 	    	sidebar = movies_sidebar;
 	    } else {
 	    	sidebar = anitime_sidebar;

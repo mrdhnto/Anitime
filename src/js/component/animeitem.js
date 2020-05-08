@@ -20,7 +20,7 @@ class AnimeItem extends HTMLElement {
       const urlParams = new URLSearchParams(queryString);
       const site_mode = urlParams.get('mode')
 
-      if(site_mode === "movie"){
+      if(site_mode === "movies"){
         if(this._anime.studios.nodes !== null){
           let std = this._anime.studios.nodes.map((el) => {
             return el["name"]

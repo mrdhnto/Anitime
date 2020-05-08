@@ -8,7 +8,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const site_mode = urlParams.get('mode')
 
-if(site_mode === "movie"){
+if(site_mode === "movies"){
         main('Spring');
     } else {
         main('TV');

@@ -11,7 +11,7 @@ const site_mode = urlParams.get('mode')
 
 function main(keyword){
   
-  	if(site_mode === "movie"){
+  	if(site_mode === "movies"){
 		DataSource.movieList(keyword)
      	.then(renderResult)
      	.catch(fallbackResult)
@@ -49,7 +49,7 @@ function main(keyword){
  
 function renderResult(results) {
 
-	if(site_mode === "movie"){
+	if(site_mode === "movies"){
 		const animeListElement = document.querySelector("anime-list");
 	      animeListElement.dataresult = results;
 	      animeListElement.animeformat = "MOVIES";
