@@ -192,7 +192,13 @@ class AnimeInfo extends HTMLElement {
           </style>
           `;
 
-        if (this._animeformat === "MOVIE"){
+        if (this._animeformat === "MOVIES"){
+          this._dataresult.Page.media.forEach(media => {
+              const infoItemElement = document.createElement("info-item");
+              infoItemElement.anime = media;
+              this.appendChild(infoItemElement);
+          })
+        } else if (this._animeformat === "MOVIE"){
 
           this._dataresult.Page.media.forEach(media => {
             if (media.endDate.day !== null && media.endDate.month !== null){

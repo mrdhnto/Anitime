@@ -4,10 +4,143 @@ class SideBar extends HTMLElement {
 	}
 
 	connectedCallback(){
- 		this.render();
+		let sidebar;
+
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const site_mode = urlParams.get('mode')
+
+	    let anitime_sidebar = `
+		    <nav id="sidebar">
+	            <div class="sidebar-header">
+	                <img src="/dist/assets/images/logo.png">
+	                <div id="dismiss">
+	                <span class="material-icons align-middle">arrow_back</span>
+	                </div>
+	            </div>
+	            <ul class="list-unstyled components ">
+	                <li class="nav-item active" target="TV">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">tv</span>
+	                        <span class="ml-1">&nbspTV</span>
+	                    </div>
+	                </li>
+	                <li class="nav-item" target="OVA">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">album</span>
+	                        <span class="ml-1">&nbspOVA&nbsp&nbsp/ ONA</span>
+	                    </div>
+	                </li>
+	                <li class="nav-item" target="MOVIE">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">movie</span>
+	                        <span class="ml-1">&nbspMovie</span>
+	                    </div>
+	                </li>
+	            </ul>
+	            <ul class="list-unstyled">
+	              <li class="nav-item2"><a href="?mode=movie">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">apps</span>
+	                  <span class="ml-1">&nbspMovies Mode</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://darkerside.github.io">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">info</span>
+	                  <span class="ml-1">&nbspAbout</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://trakteer.id/ra121514">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">credit_card</span>
+	                  <span class="ml-1">&nbspSupport Me</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://github.com/Darkerside/Anitime">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">language</span>
+	                  <span class="ml-1">&nbspGithub</span>
+	                </div></a>
+	              </li>
+	            </ul>
+	        </nav>
+	    `
+
+	    let movies_sidebar = `
+			<nav id="sidebar">
+	            <div class="sidebar-header">
+	                <img src="/dist/assets/images/logo.png">
+	                <div id="dismiss">
+	                <span class="material-icons align-middle">arrow_back</span>
+	                </div>
+	            </div>
+	            <ul class="list-unstyled components ">
+	                <li class="nav-item active" target="Spring">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">eco</span>
+	                        <span class="ml-1">&nbspSpring</span>
+	                    </div>
+	                </li>
+	                <li class="nav-item" target="Summer">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">brightness_7</span>
+	                        <span class="ml-1">&nbspSummer</span>
+	                    </div>
+	                </li>
+	                <li class="nav-item" target="Fall">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">toys</span>
+	                        <span class="ml-1">&nbspFall</span>
+	                    </div>
+	                </li>
+	                <li class="nav-item" target="Winter">
+	                    <div class="nav-link">
+	                        <span class="material-icons align-middle">ac_unit</span>
+	                        <span class="ml-1">&nbspWinter</span>
+	                    </div>
+	                </li>
+	            </ul>
+	            <ul class="list-unstyled">
+	              <li class="nav-item2"><a href="./">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">apps</span>
+	                  <span class="ml-1">&nbspSchedules Mode</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://darkerside.github.io">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">info</span>
+	                  <span class="ml-1">&nbspAbout</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://trakteer.id/ra121514">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">credit_card</span>
+	                  <span class="ml-1">&nbspSupport Me</span>
+	                </div></a>
+	              </li>
+	              <li class="nav-item2"><a target="_blank" href="https://github.com/Darkerside/Anitime">
+	                <div class="nav-link">
+	                  <span class="material-icons align-middle">language</span>
+	                  <span class="ml-1">&nbspGithub</span>
+	                </div></a>
+	              </li>
+	            </ul>
+	        </nav>
+	    `
+
+	    if(site_mode === "movie"){
+	    	sidebar = movies_sidebar;
+	    } else {
+	    	sidebar = anitime_sidebar;
+	    }
+
+ 		this.render(sidebar);
 	}
  
-	render() {
+	render(sidebar) {
+		
 		this.innerHTML = `
 		<style>
 		#sidebar {
@@ -115,54 +248,7 @@ class SideBar extends HTMLElement {
 		}
 
 		</style>
-		<nav id="sidebar">
-            <div class="sidebar-header">
-                <img src="/dist/assets/images/logo.png">
-                <div id="dismiss">
-                <span class="material-icons align-middle">arrow_back</span>
-                </div>
-            </div>
-            <ul class="list-unstyled components ">
-                <li class="nav-item active" target="TV">
-                    <div class="nav-link">
-                        <span class="material-icons align-middle">tv</span>
-                        <span class="ml-1">&nbspTV</span>
-                    </div>
-                </li>
-                <li class="nav-item" target="OVA">
-                    <div class="nav-link">
-                        <span class="material-icons align-middle">album</span>
-                        <span class="ml-1">&nbspOVA&nbsp&nbsp/ ONA</span>
-                    </div>
-                </li>
-                <li class="nav-item" target="MOVIE">
-                    <div class="nav-link">
-                        <span class="material-icons align-middle">movie</span>
-                        <span class="ml-1">&nbspMovie</span>
-                    </div>
-                </li>
-            </ul>
-            <ul class="list-unstyled">
-              <li class="nav-item2"><a target="_blank" href="https://darkerside.github.io">
-                <div class="nav-link">
-                  <span class="material-icons align-middle">info</span>
-                  <span class="ml-1">&nbspAbout</span>
-                </div></a>
-              </li>
-              <li class="nav-item2"><a target="_blank" href="https://trakteer.id/ra121514">
-                <div class="nav-link">
-                  <span class="material-icons align-middle">credit_card</span>
-                  <span class="ml-1">&nbspSupport Me</span>
-                </div></a>
-              </li>
-              <li class="nav-item2"><a target="_blank" href="https://github.com/Darkerside/Anitime">
-                <div class="nav-link">
-                  <span class="material-icons align-middle">language</span>
-                  <span class="ml-1">&nbspGithub</span>
-                </div></a>
-              </li>
-            </ul>
-        </nav>
+		${sidebar}
 		`;
 	}
 }

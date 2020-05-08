@@ -52,19 +52,6 @@ class AnimeList extends HTMLElement {
               font-size: 0.9rem!important;
             }
 
-            tr.anime-title, td.anime-title {
-              height: max-content;
-              padding-bottom: 0px !important;
-            }
-
-            tr.anime-desc {
-              height: min-content;
-            }
-
-            tr.anime-info {
-              height: max-content;
-            }
-
             .card-img-overlay {
               padding: 0px;
             }
@@ -111,7 +98,16 @@ class AnimeList extends HTMLElement {
 
           $('.loading').hide();
 
-        if (this._animeformat === "MOVIE"){
+        if (this._animeformat === "MOVIES"){
+          
+          this._dataresult.Page.media.forEach(media => {
+              const animeItemElement = document.createElement("anime-item");
+              animeItemElement.className = "col pb-0 anime-table animated fadeIn";
+              animeItemElement.anime = media;
+              this.appendChild(animeItemElement);
+          })
+          
+        } else if (this._animeformat === "MOVIE"){
           
           this._dataresult.Page.media.forEach(media => {
             if (media.endDate.day !== null && media.endDate.month !== null){

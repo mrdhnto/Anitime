@@ -1,6 +1,6 @@
 {
   "name": "ANITIME",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "ANITIME - Anime Schedule like Simple, ",
   "main": "app.js",
   "scripts": {

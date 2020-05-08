@@ -3,11 +3,18 @@ import "./src/css/styles.css";
 import "./src/js/component/sidebar.js";
 import main from "./src/js/view/main.js";
 
+let animeformat;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const site_mode = urlParams.get('mode')
 
-main('TV');
+if(site_mode === "movie"){
+        main('Spring');
+    } else {
+        main('TV');
+    }
 
 $(document).ready(function() {
-    
     //Function to Call & Close Hidden Info Div
     $("anime-list").on("click", "h5.card-title", function(){
         $('anime-list').addClass("d-none");
