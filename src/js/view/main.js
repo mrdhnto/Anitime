@@ -80,8 +80,11 @@ function renderResult(results) {
 };
  
 function fallbackResult(message) {
-       alert('Error, check console');
-       console.error(message);
+	const isOnLine = navigator.onLine;
+	if (!isOnLine) {
+	    toastr.warning('no offline data, please connect to internet!');
+	}
+	console.error(message);
 };
 
 export default main;

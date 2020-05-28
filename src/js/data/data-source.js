@@ -108,20 +108,21 @@ export default class DataSource {
               'Accept': 'application/json',
           },
           body: JSON.stringify({
-              query: query,
-              variables: variables
+              variables: variables,
+              query: query.replace(/\s{2,}/g, ' '),
           })
       };
 
 
 
     return fetch(url, options)
-      .then(response => {
+      .then(async (response) => {
         return response.json();
       })
       
       .then(responseJson => {
         if(responseJson.data) {
+                //console.log(responseJson.data);
                 return Promise.resolve(responseJson.data);
               } else {
                 return Promise.reject(`Check Console`);
@@ -189,20 +190,21 @@ static movieList(keyword) {
               'Accept': 'application/json',
           },
           body: JSON.stringify({
-              query: query,
-              variables: variables
+              variables: variables,
+              query: query.replace(/\s{2,}/g, ' '),
           })
       };
 
 
 
     return fetch(url, options)
-      .then(response => {
+      .then(async (response) => {
         return response.json();
       })
       
       .then(responseJson => {
         if(responseJson.data) {
+                //console.log(responseJson.data);
                 return Promise.resolve(responseJson.data);
               } else {
                 return Promise.reject(`${keyword} is not found`);

@@ -2,24 +2,26 @@
 <html lang="en" >
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="Anitime - So Simple yet So Good">
+    <meta name="keywords" content="AniTime, Anime Schedules, Spring Anime Schedules, Summer Anime Schedules, Fall Anime Schedules, Winter Anime Schedules, Daily Anime Schedules, Daily Anime OVA Schedules, Daily OVA Schedules, Daily ONA Schedules, Daily Anime ONA Schedules, Anime Movie Schedules, Anime Movie 2020 Schedules, Animini, Luminix Studio">
+    <meta name="author" content="RA121514">
+    <meta name="author" content="Luminix Studio">
+    <meta name="dicoding:email" content="riski.mardianto@gmail.com">
+    <meta name="theme-color" content="#131417"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="AniTime">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/dist/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/dist/assets/css/mdb.min.css">
     <link rel="stylesheet" href="/dist/assets/css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="/dist/assets/css/styles.css">
-    <script src="/dist/assets/js/jquery-3.5.0.slim.min.js"></script>
-    <script src="/dist/assets/js/popper.min.js"></script>
-    <script src="/dist/assets/js/bootstrap.min.js"></script>
-    <script src="/dist/assets/js/mdb.min.js"></script>
-    <script src="/dist/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="/dist/assets/js/moment.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Anitime - So Simple yet So Good">
-    <meta name="author" content="RA121514">
-    <meta name="author" content="Luminix Studio">
-    <meta name="dicoding:email" content="riski.mardianto@gmail.com">
-    <link rel="icon" type="image/png" href="/dist/assets/images/icon.png" >
+    <link rel="manifest" href="manifest.json">
+    <link href="/dist/assets/images/apple-icon.png" rel="apple-touch-icon">
+   <link href="/dist/assets/images/icon-512.png" rel="icon" type="image/png">
     <title>AniTime - So Simple yet So Good</title>
   </head>
   <body>
@@ -32,13 +34,20 @@
     <div class="wrapper">
       <side-bar></side-bar>
       <div class="overlay"></div>
-        <main class="container-fluid">
-            <div class="col-md-12 col-lg-12 px-2">
-              <anime-list class="row mt-3 mb-3" id="airedAnime"></anime-list>
-              <anime-info class="row row-cols-1 mt-3 mb-2"></anime-info>
-              <next-day class="row row-cols-1 text-center mt-2 mb-3"></next-day>
-              <div class="text-center loading"><span class="material-icons" id="loading">sync</span></div>
-            </div>
-        </main>
+      <main class="container-fluid">
+        <div class="col-md-12 col-lg-12 px-2">
+          <anime-list class="row mt-3 mb-3" id="airedAnime"></anime-list>
+          <anime-info class="row row-cols-1 mt-3 mb-2"></anime-info>
+          <next-day class="row row-cols-1 text-center mt-2 mb-3"></next-day>
+          <div class="text-center loading"><span class="material-icons" id="loading">sync</span></div>
+        </div>
+      </main>
+    </div>
+    <script src="/dist/assets/js/jquery-3.5.0.slim.min.js"></script>
+    <script src="/dist/assets/js/popper.min.js"></script>
+    <script src="/dist/assets/js/bootstrap.min.js"></script>
+    <script src="/dist/assets/js/mdb.min.js"></script>
+    <script src="/dist/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/dist/assets/js/moment.js"></script>
   </body>
 </html>

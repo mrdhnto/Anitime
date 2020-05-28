@@ -8,6 +8,22 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const site_mode = urlParams.get('mode')
 
+if (!("serviceWorker" in navigator)) {
+  console.error("ServiceWorker: Browser tidak mendukung.");
+} else {
+  navigator.serviceWorker
+    .register("./service-worker.js")
+    .then(function(registration) {
+      console.log(
+        "ServiceWorker: Pendaftaran berhasil. Scope:",
+        registration.scope
+      );
+    })
+    .catch(function(error) {
+      console.error("ServiceWorker: Pendaftaran gagal. Error:", error);
+    });
+}
+
 if(site_mode === "movies"){
         main('Spring');
     } else {
@@ -15,6 +31,8 @@ if(site_mode === "movies"){
     }
 
 $(document).ready(function() {
+    //check expired cache
+
     //Function to Call & Close Hidden Info Div
     $("anime-list").on("click", "h5.card-title", function(){
         $('anime-list').addClass("d-none");
