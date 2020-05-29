@@ -21,7 +21,7 @@ class InfoItem extends HTMLElement {
 
       this.innerHTML = `
  
-        <div class="jumbotron card rounded-0 p-0 m-0 animated fadeInUp d-none" id="${this._anime.id}">
+        <div class="jumbotron card rounded-0 p-0 m-0">
           <div class="card card-image z-depth-0 mb-0 anime-bn" style="background-image: url(${this._anime.bannerImage});">
             <img src="${this._anime.bannerImage}" class="img-fluid anime-bn-fill" />
           </div>
@@ -80,7 +80,7 @@ class InfoItem extends HTMLElement {
             </div>
             <!-- Button -->
             <div class="row justify-content-end">
-              <button class="btn btn-dark btn-rounded btn-back-anime" target="${this._anime.id}">Back</button>
+              <button class="btn btn-dark btn-back-anime mask waves-effect waves-light rgba-white-slight" target="${this._anime.id}">Back</button>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ class InfoItem extends HTMLElement {
 
       this.innerHTML = `
    
-        <div class="jumbotron card rounded-0 p-0 m-0 animated fadeInUp d-none" id="${this._anime.mediaId}">
+        <div class="jumbotron card rounded-0 p-0 m-0">
           <div class="card card-image z-depth-0 mb-0 anime-bn" style="background-image: url(${this._anime.media.bannerImage});">
             <img src="${this._anime.media.bannerImage}" class="img-fluid anime-bn-fill" />
           </div>
@@ -155,7 +155,7 @@ class InfoItem extends HTMLElement {
             </div>
             <!-- Button -->
             <div class="row justify-content-end">
-              <button class="btn btn-dark btn-rounded btn-back-anime" target="${this._anime.mediaId}">Back</button>
+              <button class="btn btn-dark btn-back-anime mask waves-effect waves-light rgba-white-slight" target="${this._anime.mediaId}">Back</button>
             </div>
           </div>
         </div>

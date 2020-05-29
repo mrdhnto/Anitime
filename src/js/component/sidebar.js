@@ -10,7 +10,7 @@ class SideBar extends HTMLElement {
 		const urlParams = new URLSearchParams(queryString);
 		const site_mode = urlParams.get('mode')
 
-	    let anitime_sidebar = `
+		let anitime_sidebar = `
 		    <nav id="sidebar">
 	            <div class="sidebar-header">
 	                <img src="/dist/assets/images/logo.png">
@@ -198,7 +198,7 @@ class SideBar extends HTMLElement {
 		    top: 48px;
 		}
 
-		#sidebar .sidebar-header {
+		.sidebar-header {
 		    padding: 1.2em 1em 1em 1em;
 		    color: #00ffdc;
 		    background-color: #131417;
@@ -246,7 +246,6 @@ class SideBar extends HTMLElement {
 		    cursor: pointer;
 		    transition: all 0.3s;
 		}
-
 		</style>
 		${sidebar}
 		`;

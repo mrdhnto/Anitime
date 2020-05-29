@@ -33,6 +33,7 @@ class AnimeInfo extends HTMLElement {
               background-size: cover;
               max-height: 19vw;
               background-position: 50% 35%;
+              border-radius: 0 !important;
             }
 
             .anime-bn-fill {
@@ -195,6 +196,8 @@ class AnimeInfo extends HTMLElement {
         if (this._animeformat === "MOVIES"){
           this._dataresult.Page.media.forEach(media => {
               const infoItemElement = document.createElement("info-item");
+              infoItemElement.className = "animated fadeInUp d-none mt-3";
+              infoItemElement.id = `${media.id}`;
               infoItemElement.anime = media;
               this.appendChild(infoItemElement);
           })
@@ -203,6 +206,8 @@ class AnimeInfo extends HTMLElement {
           this._dataresult.Page.media.forEach(media => {
             if (media.endDate.day !== null && media.endDate.month !== null){
               const infoItemElement = document.createElement("info-item");
+              infoItemElement.className = "animated fadeInUp d-none mt-3";
+              infoItemElement.id = `${media.id}`;
               infoItemElement.anime = media;
               this.appendChild(infoItemElement);
               movie = movie + 1;
@@ -220,12 +225,16 @@ class AnimeInfo extends HTMLElement {
             if (this._animeformat === "TV") {
               if (airingSchedules.media.format === "TV" || airingSchedules.media.format === "TV_SHORT") {
                 const infoItemElement = document.createElement("info-item");
+                infoItemElement.className = "animated fadeInUp d-none mt-3";
+              	infoItemElement.id = `${airingSchedules.mediaId}`;
                 infoItemElement.anime = airingSchedules;
                 this.appendChild(infoItemElement);
               }
             } else if (this._animeformat === "TV2") {
               if (airingSchedules.media.format === "TV" || airingSchedules.media.format === "TV_SHORT") {
                 const infoItemElement = document.createElement("info-item");
+                infoItemElement.className = "animated fadeInUp d-none mt-3";
+              	infoItemElement.id = `${airingSchedules.mediaId}`;
                 infoItemElement.anime = airingSchedules;
                 this.appendChild(infoItemElement);
               }
@@ -233,6 +242,8 @@ class AnimeInfo extends HTMLElement {
               if (airingSchedules.media.format === "OVA" || airingSchedules.media.format === "ONA") {
                 if (airingSchedules.media.genres.includes("Hentai") === false){
                   const infoItemElement = document.createElement("info-item");
+                  infoItemElement.className = "animated fadeInUp d-none mt-3";
+              	  infoItemElement.id = `${airingSchedules.mediaId}`;
                   infoItemElement.anime = airingSchedules;
                   this.appendChild(infoItemElement);
                   ova = ova + 1;

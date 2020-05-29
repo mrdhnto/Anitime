@@ -79,7 +79,7 @@ class AnimeItem extends HTMLElement {
           <div class="row no-gutters">
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 anime-cover">
               <img src="${this._anime.coverImage.large}" class="card-img" alt="${this._anime.title.romaji}">
-              <div class="card-img-overlay align-content-between row d-flex">
+              <div class="card-img-overlay align-content-between row d-flex" target="${this._anime.id}">
                 <h5 class="air-time">${this._anime.startDate.day} ${this._anime.startDate.month} ${this._anime.startDate.year}</h5>
                 <h5 class="air-eps">${info_2}</h5>
               </div>

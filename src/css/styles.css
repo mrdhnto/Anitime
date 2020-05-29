@@ -40,6 +40,10 @@ a:focus {
   padding: .5rem 1rem !important;
 }
 
+button .material-icons {
+  font-size: 20px !important;
+}
+
 /*
  * Content
  */
@@ -76,8 +80,8 @@ main {
   100% { transform: rotate(-360deg); }
 }
 
-button .material-icons {
-  font-size: 20px;
+button .mdi {
+  font-size: 13px;
 }
 
 h4.no-item {
