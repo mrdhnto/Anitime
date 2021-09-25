@@ -90,7 +90,7 @@ class SideBar extends HTMLElement {
 	                </li>
 	                <li class="nav-item" target="Fall">
 	                    <div class="nav-link">
-	                        <span class="material-icons align-middle">toys</span>
+	                        <span class="material-icons align-middle">air</span>
 	                        <span class="ml-1">&nbspFall</span>
 	                    </div>
 	                </li>
